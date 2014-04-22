@@ -30,6 +30,7 @@ import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -66,7 +67,18 @@ public abstract class BaseDialogFragment extends DialogFragment {
 		return build(builder).create();
 	}
 
-	protected abstract Builder build(Builder initialBuilder);
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        try {
+            getDialog().getWindow()
+                    .setSoftInputMode (WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+        } catch (Exception e) {
+            // just in case
+        }
+    }
+
+    protected abstract Builder build(Builder initialBuilder);
 
 	@Override
 	public void onDestroyView() {
