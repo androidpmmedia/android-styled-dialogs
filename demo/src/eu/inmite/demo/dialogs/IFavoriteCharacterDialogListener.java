@@ -17,5 +17,5 @@
 package eu.inmite.demo.dialogs;
 
 public interface IFavoriteCharacterDialogListener {
-	public void onListItemSelected(String value, int number);
+  public void onListItemSelected(String value, int number);
 }

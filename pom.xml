@@ -16,180 +16,183 @@
   ~ limitations under the License.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>7</version>
-	</parent>
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>7</version>
+  </parent>
 
-	<groupId>eu.inmite.android.lib</groupId>
-	<artifactId>android-styled-dialogs-parent</artifactId>
-	<packaging>pom</packaging>
-	<version>1.0.2-SNAPSHOT</version>
+  <groupId>eu.inmite.android.lib</groupId>
+  <artifactId>android-styled-dialogs-parent</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.2-SNAPSHOT</version>
 
-	<name>Android StyledDialogs Parent</name>
-	<description>Android library for creating styleable dialogs easily</description>
-	<inceptionYear>2013</inceptionYear>
-	<url>https://github.com/inmite/android-styled-dialogs/</url>
+  <name>Android StyledDialogs Parent</name>
+  <description>Android library for creating styleable dialogs easily</description>
+  <inceptionYear>2013</inceptionYear>
+  <url>https://github.com/inmite/android-styled-dialogs/</url>
 
-	<organization>
-		<name>Inmite.eu</name>
-		<url>http://www.inmite.eu</url>
-	</organization>
+  <organization>
+    <name>Inmite.eu</name>
+    <url>http://www.inmite.eu</url>
+  </organization>
 
-	<licenses>
-		<license>
-			<name>Apache 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-		</license>
-	</licenses>
+  <licenses>
+    <license>
+      <name>Apache 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
 
-	<developers>
-		<developer>
-			<name>David Vávra</name>
-			<email>david@inmite.eu</email>
-			<roles>
-				<role>developer</role>
-			</roles>
-		</developer>
-	</developers>
+  <developers>
+    <developer>
+      <name>David Vávra</name>
+      <email>david@inmite.eu</email>
+      <roles>
+        <role>developer</role>
+      </roles>
+    </developer>
+  </developers>
 
-	<scm>
-		<connection>scm:git:https://github.com/inmite/android-styled-dialogs.git</connection>
-		<developerConnection>scm:git:https://github.com/inmite/android-styled-dialogs.git</developerConnection>
-		<url>https://github.com/inmite/android-styled-dialogs</url>
-	  <tag>HEAD</tag>
+  <scm>
+    <connection>scm:git:https://github.com/inmite/android-styled-dialogs.git</connection>
+    <developerConnection>scm:git:https://github.com/inmite/android-styled-dialogs.git
+    </developerConnection>
+    <url>https://github.com/inmite/android-styled-dialogs</url>
+    <tag>HEAD</tag>
   </scm>
 
-	<issueManagement>
-		<system>Github</system>
-		<url>https://github.com/inmite/android-styled-dialogs/issues</url>
-	</issueManagement>
+  <issueManagement>
+    <system>Github</system>
+    <url>https://github.com/inmite/android-styled-dialogs/issues</url>
+  </issueManagement>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-		<java.version>1.6</java.version>
-		<apk.skipProguard>true</apk.skipProguard>
-		<android.version>4.1.1.4</android.version>
-		<android.platform>16</android.platform>
-		<android.support.version>r7</android.support.version>
-	</properties>
+    <java.version>1.6</java.version>
+    <apk.skipProguard>true</apk.skipProguard>
+    <android.version>4.1.1.4</android.version>
+    <android.platform>16</android.platform>
+    <android.support.version>r7</android.support.version>
+  </properties>
 
-	<modules>
-		<module>library</module>
-		<module>demo</module>
-	</modules>
+  <modules>
+    <module>library</module>
+    <module>demo</module>
+  </modules>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>com.google.android</groupId>
-				<artifactId>android</artifactId>
-				<version>${android.version}</version>
-				<scope>provided</scope>
-			</dependency>
-			<dependency>
-				<groupId>com.google.android</groupId>
-				<artifactId>support-v4</artifactId>
-				<version>${android.support.version}</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.google.android</groupId>
+        <artifactId>android</artifactId>
+        <version>${android.version}</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.google.android</groupId>
+        <artifactId>support-v4</artifactId>
+        <version>${android.support.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
-	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.0</version>
-					<configuration>
-						<source>${java.version}</source>
-						<target>${java.version}</target>
-						<showWarnings>true</showWarnings>
-						<compilerArguments>
-							<Xlint />
-						</compilerArguments>
-					</configuration>
-				</plugin>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.0</version>
+          <configuration>
+            <source>${java.version}</source>
+            <target>${java.version}</target>
+            <showWarnings>true</showWarnings>
+            <compilerArguments>
+              <Xlint/>
+            </compilerArguments>
+          </configuration>
+        </plugin>
 
-				<plugin>
-					<groupId>com.jayway.maven.plugins.android.generation2</groupId>
-					<artifactId>android-maven-plugin</artifactId>
-					<version>3.6.0</version>
-					<configuration>
-						<nativeLibrariesDirectory>ignored</nativeLibrariesDirectory>
-						<sdk>
-							<platform>${android.platform}</platform>
-						</sdk>
-					</configuration>
-				</plugin>
+        <plugin>
+          <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+          <artifactId>android-maven-plugin</artifactId>
+          <version>3.6.0</version>
+          <configuration>
+            <nativeLibrariesDirectory>ignored</nativeLibrariesDirectory>
+            <sdk>
+              <platform>${android.platform}</platform>
+            </sdk>
+          </configuration>
+        </plugin>
 
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>2.9</version>
-				</plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>2.9</version>
+        </plugin>
 
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>build-helper-maven-plugin</artifactId>
-					<version>1.7</version>
-				</plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>build-helper-maven-plugin</artifactId>
+          <version>1.7</version>
+        </plugin>
 
-				<plugin>
-					<groupId>com.google.code.maven-replacer-plugin</groupId>
-					<artifactId>maven-replacer-plugin</artifactId>
-					<version>1.4.0</version>
-				</plugin>
-			</plugins>
-		</pluginManagement>
+        <plugin>
+          <groupId>com.google.code.maven-replacer-plugin</groupId>
+          <artifactId>maven-replacer-plugin</artifactId>
+          <version>1.4.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
 
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>2.4</version>
-				<configuration>
-					<mavenExecutorId>forked-path</mavenExecutorId>
-					<autoVersionSubmodules>true</autoVersionSubmodules>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
+          <mavenExecutorId>forked-path</mavenExecutorId>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
-	<profiles>
-		<profile>
-			<id>release-sign-artifacts</id>
-			<activation>
-				<property>
-					<name>performRelease</name>
-					<value>true</value>
-				</property>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-gpg-plugin</artifactId>
-						<version>1.1</version>
-						<executions>
-							<execution>
-								<id>sign-artifacts</id>
-								<phase>verify</phase>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
+  <profiles>
+    <profile>
+      <id>release-sign-artifacts</id>
+      <activation>
+        <property>
+          <name>performRelease</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.1</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 
 </project>

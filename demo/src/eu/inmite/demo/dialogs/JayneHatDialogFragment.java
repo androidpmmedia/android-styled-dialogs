@@ -18,38 +18,38 @@ package eu.inmite.demo.dialogs;
 import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
-
 import eu.inmite.android.lib.dialogs.BaseDialogFragment;
 import eu.inmite.android.lib.dialogs.ISimpleDialogListener;
 import eu.inmite.android.lib.dialogs.SimpleDialogFragment;
 
 /**
- * Sample implementation of eu.inmite.android.lib.dialogs.BaseDialogFragment - custom view by extending {@link SimpleDialogFragment}.
+ * Sample implementation of eu.inmite.android.lib.dialogs.BaseDialogFragment - custom view by
+ * extending {@link SimpleDialogFragment}.
  *
  * @author David Vávra (david@inmite.eu)
  */
 public class JayneHatDialogFragment extends SimpleDialogFragment {
 
-	public static String TAG = "jayne";
+  public static String TAG = "jayne";
 
-	public static void show(FragmentActivity activity) {
-		new JayneHatDialogFragment().show(activity.getSupportFragmentManager(), TAG);
-	}
+  public static void show(FragmentActivity activity) {
+    new JayneHatDialogFragment().show(activity.getSupportFragmentManager(), TAG);
+  }
 
-	@Override
-	public BaseDialogFragment.Builder build(BaseDialogFragment.Builder builder) {
-		builder.setTitle("Jayne's hat");
-		builder.setView(LayoutInflater.from(getActivity()).inflate(R.layout.item_jayne_hat, null));
-		builder.setPositiveButton("I want one", new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				ISimpleDialogListener listener = getDialogListener();
-				if (listener != null) {
-					listener.onPositiveButtonClicked(0);
-				}
-				dismiss();
-			}
-		});
-		return builder;
-	}
+  @Override
+  public BaseDialogFragment.Builder build(BaseDialogFragment.Builder builder) {
+    builder.setTitle("Jayne's hat");
+    builder.setView(LayoutInflater.from(getActivity()).inflate(R.layout.item_jayne_hat, null));
+    builder.setPositiveButton("I want one", new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        ISimpleDialogListener listener = getDialogListener();
+        if (listener != null) {
+          listener.onPositiveButtonClicked(0);
+        }
+        dismiss();
+      }
+    });
+    return builder;
+  }
 }
